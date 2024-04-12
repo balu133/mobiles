@@ -1,0 +1,16 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,300px);
+    grid-auto-rows: minmax(200px,auto);
+    grid-gap:15px;
+}
+.head{
+    height:60px;
+    background-color: blue;
+    width: 100%;
+    position:fixed;
+
+}
+li{
+    margin-top: 10px;
+}
