@@ -7,7 +7,7 @@ function Footer() {
         +91 9876543210
         +91 1234567890
         EMAIL : balajibalu123@gmail.com
-        @DEVELOPED BY <h1>B</h1>alaji_<h1>B</h1>alu
+        @DEVELOPED BY <br /><span>B</span>alaji<span>B</span>alu
      </footer>
   )
 }

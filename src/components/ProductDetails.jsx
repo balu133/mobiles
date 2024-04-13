@@ -1,10 +1,12 @@
 import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
-import {useParams} from 'react-router-dom';
+import {useParams,useNavigate} from 'react-router-dom';
 import './style.css'
+import { Button } from 'bootstrap';
 function ProductDetails() {
-  let { id } =useParams();
+  let { id } =useParams()
+  const navigate=useNavigate();
   const [detail,setDetails]=useState([]);
   useEffect(()=>{
     fetch(`https://dummyjson.com/products/${id}`)
@@ -15,7 +17,9 @@ function ProductDetails() {
         setDetails(data);
     });
   },[id]);
-  console.log(detail);
+ function handleNavigation(){
+  navigate("/")
+ }
   return (
     <>
       <div className='detail-box'>
@@ -36,6 +40,11 @@ function ProductDetails() {
          </tbody>
        </table>
       </div>
+      <div className='btn'>
+      </div>
+      <button className="btn btn-info" style={{marginLeft:"250px"}} onClick={handleNavigation}>
+          Go To Homepage
+        </button>
     </>
   );
 }
